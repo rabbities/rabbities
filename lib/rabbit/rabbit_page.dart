@@ -51,12 +51,15 @@ class _RabbitPageState extends State<RabbitPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     initScreenUtil(context);
-    return Container(
-      color: Colors.white,
-      child: Center(
-        child: CustomPaint(
-          painter: RabbitPainter(controller: Listenable.merge(animationControllerMap.values.toList()), animationMap: animationControllerMap),
-          size: Size(0.8.sw, 1.sw),
+    return Scaffold(
+      appBar: AppBar(title: const Text('RabbitPainter')),
+      body: Container(
+        color: Colors.white,
+        child: Center(
+          child: CustomPaint(
+            painter: RabbitPainter(controller: Listenable.merge(animationControllerMap.values.toList()), animationMap: animationControllerMap),
+            size: Size(0.8.sw, 1.sw),
+          ),
         ),
       ),
     );
