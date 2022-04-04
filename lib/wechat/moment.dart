@@ -139,7 +139,7 @@ class _MomentLayoutState extends State<MomentLayout> {
                                       Radius.circular(1.0),
                                     ),
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/ins/2.jpg"),
+                                      image: AssetImage("assets/images/ins/3.jpg"),
                                       fit: BoxFit.cover,
                                     )),
                               )

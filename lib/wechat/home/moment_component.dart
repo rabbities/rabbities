@@ -18,7 +18,7 @@ class _ContactComponentState extends State<MomentComponent> {
       ListItemWidget("朋友圈", Icons.supervised_user_circle, true, () {
         // Navigator.of(context).pushNamed('momennt');
 
-        Get.to(const MomentLayout());
+        Get.to(() => const MomentLayout());
       }),
       ListItemWidget("购物", Icons.shopping_cart, false, () {})
     ]);

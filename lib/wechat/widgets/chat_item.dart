@@ -10,7 +10,7 @@ class ChatWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var assetImage = "assets/images/wechat/face${Random().nextInt(5) + 1}.jpg";
+    var assetImage = "assets/images/ins/face${Random().nextInt(5) + 1}.jpg";
     var name = RandomName.randomName(true, 3);
     var rins = Random().nextInt(1000);
     var now = DateTime.now().add(Duration(seconds: rins));
@@ -22,7 +22,7 @@ class ChatWidget extends StatelessWidget {
         child: ListTile(
           onTap: () {
             Get.to(
-              ChatLayout(arguments: {
+              () => ChatLayout(arguments: {
                 "name": name,
                 "assetImage": assetImage
               }),

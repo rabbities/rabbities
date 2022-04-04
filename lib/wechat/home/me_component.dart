@@ -76,7 +76,7 @@ class _MeComponentState extends State<MeComponent> {
         ListItemWidget("卡包", Icons.credit_card, false, () {}, margin: 0),
         ListItemWidget("表情", Icons.face, false, () {}),
         ListItemWidget("设置", Icons.settings, false, () {
-          Get.to(const SettingsLayout());
+          Get.to(() => const SettingsLayout());
         }, margin: 0),
       ],
     );
