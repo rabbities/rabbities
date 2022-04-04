@@ -1,4 +1,4 @@
-package com.loongwind.rabbit.flutter_rabbit
+package com.apanda.rabbit.app
 
 import io.flutter.embedding.android.FlutterActivity
 
