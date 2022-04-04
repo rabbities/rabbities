@@ -1,8 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_rabbit/path_ext.dart';
-import 'package:flutter_rabbit/rect_ext.dart';
+import 'package:flutter_rabbit/rabbit/rabbit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RabbitPainter extends CustomPainter {
@@ -106,7 +105,7 @@ class RabbitPainter extends CustomPainter {
     canvas.drawRect(bodyRect.clone(height: bodyRect.height * fillAnimation.value), _paint);
     canvas.restore();
 
-    _paint.color = Color(0xFFE79EC3);
+    _paint.color = const Color(0xFFE79EC3);
 
     /// 绘制左脸腮红
     drawLeftFaceFill(canvas, leftBodyPoints.first);

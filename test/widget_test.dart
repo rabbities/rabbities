@@ -5,6 +5,7 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -28,9 +29,19 @@ void main() {
     expect(find.text('1'), findsOneWidget);
   });
 
-  test("description", (){
-    var list = [0,1,2,3,4,5,6];
-    print(list.sublist(1, 4));
-    print(list.sublist(4, 7));
+  test("description", () {
+    var list = [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ];
+    if (kDebugMode) {
+      print(list.sublist(1, 4));
+      print(list.sublist(4, 7));
+    }
   });
 }

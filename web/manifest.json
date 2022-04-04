@@ -1,11 +1,12 @@
 {
   "name": "Rabbities",
   "short_name": "Rabbities",
-  "start_url": ".",
+  "id": "/rabbities/",
+  "start_url": "/rabbities/",
   "display": "standalone",
   "background_color": "#0175C2",
   "theme_color": "#0175C2",
-  "description": "A new Flutter project.",
+  "description": "Rabbities.",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [
