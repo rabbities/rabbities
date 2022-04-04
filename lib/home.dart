@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 import 'rabbit/rabbit.dart';
 import 'wechat/wechat.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,15 +12,37 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: const [
-          Expanded(child: RabbitPage()),
-          Spacer(),
-          SizedBox(
-            width: 375,
-            child: WeChatLayout(),
-          )
+      appBar: AppBar(
+        title: const Text("个人练习UI"),
+        leading: const Icon(Icons.home),
+        actions: [
+          IconButton(
+              onPressed: () {
+                launch("https://github.com/rabbities/rabbities");
+              },
+              icon: const Icon(FontAwesomeIcons.github))
         ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Card(
+              child: ListTile(
+                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                title: const Text("兔子 (转载)"),
+                onTap: () => Get.to(() => const RabbitPage()),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                title: const Text("微信 (原创)"),
+                onTap: () => Get.to(() => const WeChatLayout()),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

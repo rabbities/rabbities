@@ -6,11 +6,13 @@ import 'package:flutter_rabbit/wechat/chat.dart';
 import 'package:get/get.dart';
 
 class ChatWidget extends StatelessWidget {
-  const ChatWidget({Key? key}) : super(key: key);
+  const ChatWidget(this.index, {Key? key}) : super(key: key);
+
+  final int index;
 
   @override
   Widget build(BuildContext context) {
-    var assetImage = "assets/images/ins/face${Random().nextInt(5) + 1}.jpg";
+    var assetImage = "assets/images/ins/face${index + 1}.jpg";
     var name = RandomName.randomName(true, 3);
     var rins = Random().nextInt(1000);
     var now = DateTime.now().add(Duration(seconds: rins));

@@ -16,6 +16,7 @@ class ChatLayout extends StatefulWidget {
 
 class _ChatLayoutState extends State<ChatLayout> {
   final TextEditingController _controller = TextEditingController();
+  final ScrollController scrollController = ScrollController();
 
   bool isShowBottomWidget = false;
   bool speaker = false;
@@ -24,6 +25,16 @@ class _ChatLayoutState extends State<ChatLayout> {
   int startTimeSpeak = 1000;
 
   bool showOutterFrame = false;
+
+  @override
+  void initState() {
+    scrollController.animateTo(
+      0.0,
+      duration: const Duration(seconds: 1),
+      curve: Curves.fastOutSlowIn,
+    );
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +55,12 @@ class _ChatLayoutState extends State<ChatLayout> {
       body: Stack(
         children: <Widget>[
           ListView(
+            reverse: true,
+            shrinkWrap: true,
+            controller: scrollController,
             children: <Widget>[
-              _buildTime("昨天 12:00"),
+              _buildMessageItemWidget(context, 6, "传奇工程师卡马克决定辞职专心搞AI！不再担任Oculus首席技术官，投身通用人工智能研究", true),
+              _buildTime("刚刚"),
               _buildMessageItemWidget(context, 0, "hello 你好👋", false),
               _buildMessageItemWidget(context, 0, "hello 你好👋", true),
               _buildMessageItemWidget(context, 1, "assets/images/ins/1.jpg", false),
@@ -56,8 +71,7 @@ class _ChatLayoutState extends State<ChatLayout> {
               _buildMessageItemWidget(context, 5, "语音时长 00:56", false),
               _buildMessageItemWidget(context, 5, "语音时长 00:56", true),
               _buildMessageItemWidget(context, 6, "传奇工程师卡马克决定辞职专心搞AI！不再担任Oculus首席技术官，投身通用人工智能研究", false),
-              _buildTime("刚刚"),
-              _buildMessageItemWidget(context, 6, "传奇工程师卡马克决定辞职专心搞AI！不再担任Oculus首席技术官，投身通用人工智能研究", true),
+              _buildTime("昨天 12:00"),
             ],
           ),
           if (startSpeak)
