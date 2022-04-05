@@ -14,7 +14,7 @@ class WebsitePage extends StatelessWidget {
         [
           const TitleBarWidget(),
           const SizedBox(height: 1),
-          const ConversationWidget(),
+          // const ConversationWidget(),
         ].toColumn().expanded(),
       ].toRow(),
     );

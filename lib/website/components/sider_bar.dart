@@ -3,7 +3,6 @@ import 'package:flutter_rabbit/website/website.controller.dart';
 import 'package:flutter_rabbit/website/website.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:styled_widget/styled_widget.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SiderBarWidget extends StatelessWidget {
   const SiderBarWidget({
@@ -38,7 +37,7 @@ class SiderBarWidget extends StatelessWidget {
                       const Text('一只熊猫').fontSize(16).textColor(Colors.white),
                       const Text('Web Designer').fontSize(12).textColor(const Color(0xff9BA4B0)),
                     ].toColumn(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start),
-                ].toRow(crossAxisAlignment: CrossAxisAlignment.center).padding(left: menuOpend ? 24 : 16, vertical: 22).border(bottom: 1, color: const Color(0xff323E4A)).ripple().gestures(onTap: () => c.toggle()),
+                ].toRow(crossAxisAlignment: CrossAxisAlignment.center).padding(left: menuOpend ? 24 : 16, vertical: 22).border(bottom: 1, color: const Color(0xff323E4A)).ripple(), //.gestures(onTap: () => c.toggle()),
                 MenuGroupWidget(label: '菜单', menuOpend: menuOpend),
                 MenuItemWidget(menuOpend: menuOpend, icon: const Icon(Icons.dashboard_rounded), label: '首页'),
                 MenuItemWidget(menuOpend: menuOpend, icon: const Icon(Icons.group_rounded), label: '好友'),

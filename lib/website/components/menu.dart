@@ -32,6 +32,8 @@ class MenuItemWidget extends StatelessWidget {
       if (menuOpend) Text(label).textColor(Colors.white),
     ].toRow(mainAxisAlignment: menuOpend ? MainAxisAlignment.start : MainAxisAlignment.center).padding(all: 12).ripple(hoverColor: const Color(0xff5965DB)).clipRRect(all: 5).gestures(
       onTap: () {
+        if (menuOpend) return;
+
         BotToast.showAttachedWidget(
           targetContext: context,
           onlyOne: true,
