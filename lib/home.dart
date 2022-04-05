@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 import 'rabbit/rabbit.dart';
+import 'website/index.dart';
 import 'wechat/wechat.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -31,14 +32,21 @@ class HomePage extends StatelessWidget {
               child: ListTile(
                 trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
                 title: const Text("兔子 (转载)"),
-                onTap: () => Get.to(() => const RabbitPage()),
+                onTap: () => Get.to(() => const RabbitPage(), routeName: 'rabiit'),
               ),
             ),
             Card(
               child: ListTile(
                 trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
                 title: const Text("微信 (原创)"),
-                onTap: () => Get.to(() => const WeChatLayout()),
+                onTap: () => Get.to(() => const WeChatLayout(), routeName: 'wechat'),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                title: const Text("Website (原创)"),
+                onTap: () => Get.to(() => const WebsitePage(), routeName: 'website'),
               ),
             ),
           ],
