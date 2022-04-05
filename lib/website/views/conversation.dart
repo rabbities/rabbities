@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-class ConversationWidget extends StatelessWidget {
-  const ConversationWidget({Key? key}) : super(key: key);
+class ConversationView extends StatelessWidget {
+  const ConversationView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,30 @@ class ConversationWidget extends StatelessWidget {
         const _ChatItemWidget(),
         const SizedBox(height: 1),
         const _ChatItemWidget(),
-      ].toColumn().width(340).parent(
+      ]
+          .toColumn(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+          )
+          .width(340)
+          .parent(
             ({required child}) => SingleChildScrollView(
               child: child,
               controller: ScrollController(),
             ),
           ),
       const Spacer()
-    ].toRow();
+    ]
+        .toRow(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+        )
+        .parent(
+          ({required child}) => SizedBox(
+            child: child,
+            height: double.infinity,
+          ),
+        );
   }
 }
 

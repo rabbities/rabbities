@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rabbit/routes/app_pages.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-
-import 'rabbit/rabbit.dart';
-import 'website/index.dart';
-import 'wechat/wechat.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,21 +29,21 @@ class HomePage extends StatelessWidget {
               child: ListTile(
                 trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
                 title: const Text("兔子 (转载)"),
-                onTap: () => Get.to(() => const RabbitPage(), routeName: 'rabiit'),
+                onTap: () => Get.toNamed(Routes.RABBIT),
               ),
             ),
             Card(
               child: ListTile(
                 trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
                 title: const Text("微信 (原创)"),
-                onTap: () => Get.to(() => const WeChatLayout(), routeName: 'wechat'),
+                onTap: () => Get.toNamed(Routes.WECHAT),
               ),
             ),
             Card(
               child: ListTile(
                 trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
                 title: const Text("Website (原创)"),
-                onTap: () => Get.to(() => const WebsitePage(), routeName: 'website'),
+                onTap: () => Get.toNamed(Routes.WEBSITE),
               ),
             ),
           ],

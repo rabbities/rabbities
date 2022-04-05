@@ -1,8 +1,9 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_rabbit/home.dart';
 import 'package:get/get.dart';
+
+import 'routes/app_pages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Rabbities',
+      getPages: AppPages.routes,
+      initialRoute: AppPages.INITIAL,
       builder: (context, child) {
         child = botToastBuilder(context, child);
         return child;
@@ -42,7 +45,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xFFE5E5E5),
         dividerColor: Colors.white54,
       ),
-      home: const HomePage(),
+      // : const HomePage(),
     );
   }
 }
