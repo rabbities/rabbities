@@ -7,6 +7,7 @@ abstract class Routes {
   static const WECHAT = _Paths.WECHAT;
   static const RABBIT = _Paths.RABBIT;
   static const WEBSITE = _Paths.WEBSITE;
+  static const FLUENT = _Paths.FLUENT;
 
   static const APP = _Paths.WEBSITE + _Paths.APP;
   static const DASHBOARD = _Paths.WEBSITE + _Paths.DASHBOARD;
@@ -21,6 +22,7 @@ abstract class Routes {
 abstract class _Paths {
   static const HOME = '/';
   static const WECHAT = '/wechat';
+  static const FLUENT = '/fluent';
   static const RABBIT = '/rabbit';
   static const WEBSITE = '/website';
   static const APP = '/app';

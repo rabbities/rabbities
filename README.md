@@ -6,6 +6,10 @@
 
 > TODO
 
-- [x] 左侧菜单 可关闭 
+- [x] 左侧菜单 可关闭
 - [x] 顶部多标签
-- [x] Navigator2  接入
+- [x] Navigator2 接入
+
+upgrade ruby guide
+
+> https://ganzhixiong.com/p/5cfaa141/

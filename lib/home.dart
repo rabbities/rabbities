@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rabbit/routes/app_pages.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                launch("https://github.com/rabbities/rabbities");
+                launchUrlString("https://github.com/rabbities/rabbities");
               },
               icon: const Icon(FontAwesomeIcons.github))
         ],
@@ -44,6 +44,13 @@ class HomePage extends StatelessWidget {
                 trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
                 title: const Text("Website (原创)"),
                 onTap: () => Get.toNamed(Routes.WEBSITE),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                title: const Text("Fluent UI (原创)"),
+                onTap: () => Get.toNamed(Routes.FLUENT),
               ),
             ),
           ],

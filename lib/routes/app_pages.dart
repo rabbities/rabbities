@@ -1,3 +1,4 @@
+import 'package:flutter_rabbit/fluent_ui/index.dart';
 import 'package:flutter_rabbit/home.dart';
 import 'package:flutter_rabbit/rabbit/rabbit.dart';
 import 'package:flutter_rabbit/website/website.dart';
@@ -30,6 +31,13 @@ class AppPages {
       page: () => const WeChatLayout(),
       participatesInRootNavigator: true,
       preventDuplicates: true,
+    ),
+    GetPage(
+      name: '/fluent',
+      page: () => const FluentUiPage(),
+      participatesInRootNavigator: true,
+      preventDuplicates: true,
+      binding: FluentUiBinding(),
     ),
     GetPage(
       name: '/website',
