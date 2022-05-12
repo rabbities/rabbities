@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rabbit/routes/app_pages.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class HomePage extends StatelessWidget {

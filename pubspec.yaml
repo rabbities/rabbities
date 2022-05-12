@@ -21,6 +21,7 @@ dependencies:
   bot_toast: ^4.0.1
   logger: ^1.1.0
   fluent_ui: ^3.11.1
+  google_fonts: ^2.3.2
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +54,10 @@ flutter:
     - family: HanSans
       fonts:
         - asset: assets/fonts/SourceHanSansCN-Medium.ttf
+
+    - family: HarmonyOS_Sans
+      fonts:
+        - asset: assets/fonts/HarmonyOS_Sans_SC_Regular.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

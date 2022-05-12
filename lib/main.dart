@@ -31,12 +31,10 @@ class MyApp extends StatelessWidget {
         child = botToastBuilder(context, child);
         return child;
       },
-      navigatorObservers: [
-        BotToastNavigatorObserver()
-      ],
+      navigatorObservers: [BotToastNavigatorObserver()],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'HanSans',
+        fontFamily: 'HarmonyOS_Sans',
         primarySwatch: Colors.green,
         appBarTheme: const AppBarTheme(elevation: 0),
         primaryColor: Colors.white,
