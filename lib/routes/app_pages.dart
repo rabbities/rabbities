@@ -1,3 +1,4 @@
+import 'package:flutter_rabbit/editor/index.dart';
 import 'package:flutter_rabbit/fluent_ui/index.dart';
 import 'package:flutter_rabbit/home.dart';
 import 'package:flutter_rabbit/rabbit/rabbit.dart';
@@ -38,6 +39,12 @@ class AppPages {
       participatesInRootNavigator: true,
       preventDuplicates: true,
       binding: FluentUiBinding(),
+    ),
+    GetPage(
+      name: '/editor',
+      page: () => EditorPage(),
+      participatesInRootNavigator: true,
+      preventDuplicates: true,
     ),
     GetPage(
       name: '/website',
