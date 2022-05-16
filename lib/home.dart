@@ -11,64 +11,66 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("个人练习UI"),
-        leading: const Icon(Icons.home),
-        actions: [
-          IconButton(
-              onPressed: () {
-                launchUrlString("https://github.com/rabbities/rabbities");
-              },
-              icon: const Icon(FontAwesomeIcons.github))
-        ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Card(
-              child: ListTile(
-                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                title: const Text("兔子 (转载)"),
-                onTap: () => Get.toNamed(Routes.RABBIT),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                title: const Text("微信 (原创)"),
-                onTap: () => Get.toNamed(Routes.WECHAT),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                title: const Text("Website (原创)"),
-                onTap: () => Get.toNamed(Routes.WEBSITE),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                title: const Text("Fluent UI (原创)"),
-                onTap: () {
-                  BotToast.showText(text: "dddddd");
-                  Get.toNamed(Routes.FLUENT);
+        appBar: AppBar(
+          title: const Text("个人练习UI"),
+          leading: const Icon(Icons.home),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  launchUrlString("https://github.com/rabbities/rabbities");
                 },
-              ),
-            ),
-            Card(
-              child: ListTile(
-                trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                title: const Text("编辑器 (原创)"),
-                onTap: () {
-                  Get.toNamed(Routes.EDITOR);
-                },
-              ),
-            ),
+                icon: const Icon(FontAwesomeIcons.github))
           ],
         ),
-      ),
-    );
+        body: SingleChildScrollView(
+          controller: ScrollController(),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Card(
+                  child: ListTile(
+                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                    title: const Text("兔子 (转载)"),
+                    onTap: () => Get.toNamed(Routes.RABBIT),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                    title: const Text("微信 (原创)"),
+                    onTap: () => Get.toNamed(Routes.WECHAT),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                    title: const Text("Website (原创)"),
+                    onTap: () => Get.toNamed(Routes.WEBSITE),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                    title: const Text("Fluent UI (原创)"),
+                    onTap: () {
+                      BotToast.showText(text: "dddddd");
+                      Get.toNamed(Routes.FLUENT);
+                    },
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                    title: const Text("编辑器 (原创)"),
+                    onTap: () {
+                      Get.toNamed(Routes.EDITOR);
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }
