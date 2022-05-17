@@ -56,9 +56,9 @@ flutter:
     - assets/images/
   #   - images/a_dot_ham.jpeg
   fonts:
-    - family: HanSans
-      fonts:
-        - asset: assets/fonts/SourceHanSansCN-Medium.ttf
+    #   - family: HanSans
+    #     fonts:
+    #       - asset: assets/fonts/SourceHanSansCN-Medium.ttf
 
     - family: HarmonyOS_Sans
       fonts:
