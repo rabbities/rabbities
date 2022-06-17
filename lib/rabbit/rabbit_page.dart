@@ -27,12 +27,9 @@ class _RabbitPageState extends State<RabbitPage> with TickerProviderStateMixin {
   void initAnimation() {
     for (var key in animationDurationMap.keys) {
       if (key == "border") {
-        animationControllerMap[key] =
-            AnimationController(vsync: this, upperBound: 15.0)
-              ..duration = animationDurationMap[key];
+        animationControllerMap[key] = AnimationController(vsync: this, upperBound: 15.0)..duration = animationDurationMap[key];
       } else {
-        animationControllerMap[key] = AnimationController(vsync: this)
-          ..duration = animationDurationMap[key];
+        animationControllerMap[key] = AnimationController(vsync: this)..duration = animationDurationMap[key];
       }
     }
 
@@ -60,10 +57,7 @@ class _RabbitPageState extends State<RabbitPage> with TickerProviderStateMixin {
         color: Colors.white,
         child: Center(
           child: CustomPaint(
-            painter: RabbitPainter(
-                controller:
-                    Listenable.merge(animationControllerMap.values.toList()),
-                animationMap: animationControllerMap),
+            painter: RabbitPainter(controller: Listenable.merge(animationControllerMap.values.toList()), animationMap: animationControllerMap),
             size: Size(0.8.sw, 1.sw),
           ),
         ),
@@ -72,13 +66,7 @@ class _RabbitPageState extends State<RabbitPage> with TickerProviderStateMixin {
   }
 
   void initScreenUtil(BuildContext context) {
-<<<<<<< HEAD
-    ScreenUtil.init(context,
-        designSize: const Size(360, 690), minTextAdapt: true);
-=======
-    ScreenUtil.init(context, designSize: const Size(360, 690), minTextAdapt: true );
-    // ScreenUtil.init(  designSize: const Size(375, 812) );
->>>>>>> 755524b1f7d852b715c839571dd9f938e7b92055
+    ScreenUtil.init(context, designSize: const Size(360, 690), minTextAdapt: true);
   }
 
   void exec(AnimationController current, AnimationController next) {
