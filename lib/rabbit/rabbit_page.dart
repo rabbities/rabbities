@@ -72,8 +72,13 @@ class _RabbitPageState extends State<RabbitPage> with TickerProviderStateMixin {
   }
 
   void initScreenUtil(BuildContext context) {
+<<<<<<< HEAD
     ScreenUtil.init(context,
         designSize: const Size(360, 690), minTextAdapt: true);
+=======
+    ScreenUtil.init(context, designSize: const Size(360, 690), minTextAdapt: true );
+    // ScreenUtil.init(  designSize: const Size(375, 812) );
+>>>>>>> 755524b1f7d852b715c839571dd9f938e7b92055
   }
 
   void exec(AnimationController current, AnimationController next) {
