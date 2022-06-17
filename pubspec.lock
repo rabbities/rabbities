@@ -25,12 +25,10 @@ packages:
   bot_toast:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "8d4535073aa56578409e31c243f485e4517f40e4"
-      url: "https://github.com/MMMzq/bot_toast.git"
-    source: git
-    version: "4.0.1"
+      name: bot_toast
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.2"
   characters:
     dependency: transitive
     description:
@@ -117,14 +115,14 @@ packages:
       name: flutter_markdown
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.10"
+    version: "0.6.10+1"
   flutter_screenutil:
     dependency: "direct main"
     description:
       name: flutter_screenutil
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.5.2"
+    version: "5.5.3+2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -148,7 +146,7 @@ packages:
       name: get
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.6.3"
+    version: "4.6.5"
   highlight:
     dependency: transitive
     description:
